@@ -1,10 +1,27 @@
 words=input("Enter two words? ")
 words=words.lower()
 sep=words.split(' ')
+word1=sep[0]
+word2=sep[1]
+print(word1)
+print(word2)
 
 import string
 a=string.ascii_lowercase
 
+
+firstword=[]
+secondword=[]
+
 for x in a:
-    n1=words[1].count(x)
-    print(n1)
+    n1=word1.count(x)
+    firstword.append(n1)
+    
+for x in a:
+    n2=word2.count(x)
+    secondword.append(n2)
+
+if firstword==secondword:
+    print("Output: true")
+else:
+    print("Output: false")
