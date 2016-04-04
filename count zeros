@@ -9,4 +9,6 @@ for x in list1:
   
 fact=str(fact)
 fact=fact[::-1]
-print(fact)
+
+for x in range(0,len(fact))
+    while fact[x]=0
