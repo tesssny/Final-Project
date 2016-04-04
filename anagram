@@ -1,1 +1,10 @@
-a=input("Enter two words? ")
+words=input("Enter two words? ")
+words=words.lower()
+sep=words.split(' ')
+
+import string
+a=string.ascii_lowercase
+
+for x in a:
+    n1=words[1].count(x)
+    print(n1)
