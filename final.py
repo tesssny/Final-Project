@@ -6,8 +6,14 @@ import random
 
 words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
 
-newword=random.choice(words)
+newword=random.choice(words) #randomly select word
 
-l=len(newword)
+l=str(len(newword)) #count the number of letters
 
-letter1=input(
+letter1=input("number of spaces="+l+"  ") #first letter guess
+
+l=int(l)
+word=[] #creating a list of letters in newword
+
+for x in range(0,l)
+    
