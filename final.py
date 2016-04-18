@@ -3,6 +3,8 @@ sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-i
 """
 
 import random
+import string
+a=string.ascii_lowercase
 
 words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
 
@@ -18,6 +20,6 @@ l=str(len(newword)) #convert number of letters to a string so it can be printed
 
 letter1=input("number of spaces="+l+"  ") #first letter guess
 
-
+if
 
     
