@@ -18,14 +18,17 @@ for x in range(0,l):
     
 l=str(len(newword)) #convert number of letters to a string so it can be printed
 
-letter1=input("number of spaces="+l+" First guess? ") #first letter guess
+letter1=input("number of spaces="+l+" On the fourth wrong guess, you lose. First guess? ") #first letter guess
 
-for x in word:
-    firstguess=[]
-    if l==x:
-        firstguess.append(x)
-    else:
-        firstguess.append('_')
-print(firstguess)
+turns=0
+while turns<
+    guess=[]
+    for x in word:
+        if letter1==x:
+            guess.append(x)
+        else:
+            guess.append('_')
+
+
 
     
