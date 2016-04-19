@@ -18,8 +18,8 @@ for x in range(0,l):
     
 l=str(len(newword)) #convert number of letters to a string so it can be printed
 
-letter1=input("number of spaces="+l+"  ") #first letter guess
+letter1=input("number of spaces="+l+" First guess?") #first letter guess
 
-if
+
 
     
