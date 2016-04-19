@@ -30,10 +30,7 @@ while turns<4:
             guess.append('_')
     if letter1 not in word:
         turns=turns+1
-    print(word)
-    print(turns)
-    
-    turns=4
+
     if turns==4:
         print("Game Over")
 
