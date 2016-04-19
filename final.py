@@ -12,7 +12,7 @@ newword=random.choice(words) #randomly select word
 l=len(newword) #count the number of letters
 
 word=[] #creating a list of letters in newword
-for x in range(0,l):
+for x in range(0,l-1):
     abc=newword[x]
     word.append(abc)
     
@@ -22,15 +22,17 @@ letter1=input("number of spaces = "+l+". On the fourth wrong guess, you lose. Fi
 
 turns=0
 while turns<4:
+    l=int(l)
     guess=[]
-    for x in word:
-        if letter1==x:
-            guess.append(x)
-        else:
+    for x in range(0,l-1):
+        if letter1==word[x]:
+            guess.append(letter1)
+        elif guess[x] not in a:
             guess.append('_')
     if letter1 not in word:
         turns=turns+1
-
+    letter1=input(guess+" Number of wrong guesses = "+turns+". Next guess?")
+    
     if turns==4:
         print("Game Over")
 
