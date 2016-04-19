@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, mary feyrer
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer
 """
 
 import random
@@ -18,7 +18,7 @@ for x in range(0,l):
     
 l=str(len(newword)) #convert number of letters to a string so it can be printed
 
-letter1=input("number of spaces="+l+" On the fourth wrong guess, you lose. First guess? ") #first letter guess
+letter1=input("number of spaces = "+l+". On the fourth wrong guess, you lose. First guess? ") #first letter guess
 
 turns=0
 while turns<4:
@@ -30,6 +30,9 @@ while turns<4:
             guess.append('_')
         if x not in word:
             turns=turns+1
+    print(word)
+    print(turns)
+    
     
     if turns==4:
         print("Game Over")
