@@ -21,14 +21,18 @@ l=str(len(newword)) #convert number of letters to a string so it can be printed
 letter1=input("number of spaces="+l+" On the fourth wrong guess, you lose. First guess? ") #first letter guess
 
 turns=0
-while turns<
+while turns<4:
     guess=[]
     for x in word:
         if letter1==x:
             guess.append(x)
         else:
             guess.append('_')
-
+        if x not in word:
+            turns=turns+1
+    
+    if turns==4:
+        print("Game Over")
 
 
     
