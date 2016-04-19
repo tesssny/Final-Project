@@ -20,6 +20,12 @@ l=str(len(newword)) #convert number of letters to a string so it can be printed
 
 letter1=input("number of spaces="+l+" First guess? ") #first letter guess
 
-
+for x in word:
+    firstguess=[]
+    if l==x:
+        firstguess.append(x)
+    else:
+        firstguess.append('_')
+print(firstguess)
 
     
