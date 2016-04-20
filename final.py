@@ -12,19 +12,16 @@ newword=random.choice(words) #randomly select word
 l=len(newword) #count the number of letters
 
 word=[] #creating a list of letters in newword
-for x in range(0,l-1):
+for x in range(0,l):
     abc=newword[x]
     word.append(abc)
-    
-l=str(len(newword)) #convert number of letters to a string so it can be printed
 
-letter1=input("number of spaces = "+l+". On the fourth wrong guess, you lose. First guess? ") #first letter guess
+letter1=input("number of spaces = "+str(l)+". On the fourth wrong guess, you lose. First guess? ") #first letter guess
 
 turns=0
 while turns<4:
-    l=int(l)
     guess=[]
-    for x in range(0,l-1):
+    for x in range(0,l):
         if letter1==word[x]:
             guess.append(letter1)
         elif guess[x] not in a:
