@@ -20,14 +20,20 @@ letter1=input("number of spaces = "+str(l)+". After four wrong guesses, you lose
 letter1=letter1.lower() #making the guess lowercase
 
 guess=[]
-for x in range(0,l):
+turns=0
+num=0
+
+while num<1:
+    for x in range(0,l):
         if letter1==word[x]:
             guess.append(letter1)
         else:
             guess.append('_')
-turns=1
-while turns<4 and turns>1:
-    
+        if letter1 not in word:
+            turns=turns+1
+
+
+while turns<4 and num>0:
     for x in range(0,l):
         if letter1==word[x]:
             guess.append(letter1)
