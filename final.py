@@ -31,9 +31,11 @@ while num<1:
             guess.append('_')
         if letter1 not in word:
             turns=turns+1
-    num=num+1
+    num=num+2
 
 while turns<4 and num>0:
+    letter1=input(guess+" Number of wrong guesses = "+turns+". Next guess?")
+    
     for x in range(0,l):
         if letter1==word[x]:
             guess.append(letter1)
@@ -42,7 +44,7 @@ while turns<4 and num>0:
     
     if letter1 not in word:
         turns=turns+1
-    letter1=input(guess+" Number of wrong guesses = "+turns+". Next guess?")
+    
     
     if turns==4:
         print("Game Over")
