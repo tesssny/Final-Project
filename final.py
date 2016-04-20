@@ -16,22 +16,33 @@ for x in range(0,l):
     abc=newword[x]
     word.append(abc)
 
-letter1=input("number of spaces = "+str(l)+". On the fourth wrong guess, you lose. First guess? ") #first letter guess
+letter1=input("number of spaces = "+str(l)+". After four wrong guesses, you lose. First guess? ") #first letter guess
+letter1=letter1.lower() #making the guess lowercase
 
-turns=0
-while turns<4:
-    guess=[]
+guess=[]
+for x in range(0,l):
+        if letter1==word[x]:
+            guess.append(letter1)
+        else:
+            guess.append('_')
+turns=1
+while turns<4 and turns>1:
+    
     for x in range(0,l):
         if letter1==word[x]:
             guess.append(letter1)
         elif guess[x] not in a:
             guess.append('_')
+    
     if letter1 not in word:
         turns=turns+1
     letter1=input(guess+" Number of wrong guesses = "+turns+". Next guess?")
     
     if turns==4:
         print("Game Over")
+    
+    if word==guess:
+        print("The word is "+newword+". You won!")
 
 
     
