@@ -31,7 +31,7 @@ while num<1:
             guess.append('_')
         if letter1 not in word:
             turns=turns+1
-
+    num=num+1
 
 while turns<4 and num>0:
     for x in range(0,l):
