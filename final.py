@@ -17,7 +17,8 @@ for x in range(0,l):
     word.append(abc)
 
 letter1=input("number of spaces = "+str(l)+". After five wrong guesses, you lose. First guess? ") #first letter guess
-letter1=letter1.lower() #making the guess lowercase
+while letter1 not in a:
+    letter1=input("Invalid input. Please guess a lowercase letter.") 
 
 guess=[]
 turns=0
@@ -34,7 +35,12 @@ while num<1:
     num=num+1
 
 while turns<5 and num>0:
-    letter1=input(''.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+    
+    while letter1 not in a:
+        letter1=input("Invalid input. Please guess a lowercase letter.") 
+    
+    letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+    
     
     for x in range(0,l):
         if letter1==word[x]:
