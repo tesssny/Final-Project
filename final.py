@@ -38,9 +38,9 @@ while turns<4 and num>0:
     
     for x in range(0,l):
         if letter1==word[x]:
-            guess.append(letter1)
+            guess[x]=letter1
         elif guess[x] not in a:
-            guess.append('_')
+            guess[x]='_'
     
     if letter1 not in word:
         turns=turns+1
