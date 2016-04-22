@@ -34,7 +34,7 @@ while num<1:
     num=num+1
 
 while turns<5 and num>0:
-    letter1=input(guess+" Number of wrong guesses = "+turns+". Next guess?")
+    letter1=input(''.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
     
     for x in range(0,l):
         if letter1==word[x]:
