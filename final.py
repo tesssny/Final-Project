@@ -5,7 +5,7 @@ sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-i
 import random
 import string
 a=string.ascii_lowercase
-
+choose=int(input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word"))
 words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
 
 newword=random.choice(words) #randomly select word
