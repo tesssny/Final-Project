@@ -10,7 +10,7 @@ choose=int(input("Type '1' if you want to guess the word. Type '2' if you want t
 if choose==2:
     print("cool")
 
-if choose==1:
+elif choose==1:
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
         
     newword=random.choice(words) #randomly select word
