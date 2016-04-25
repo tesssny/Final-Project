@@ -12,7 +12,7 @@ if choose==2:
 
 if choose==1:
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
-    
+        
     newword=random.choice(words) #randomly select word
     l=len(newword) #count the number of letters
     
@@ -20,25 +20,25 @@ if choose==1:
     for x in range(0,l):
         abc=newword[x]
         word.append(abc)
-    
+        
     letter1=input("number of spaces = "+str(l)+". After five wrong guesses, you lose. First guess? ") #first letter guess
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
-    
+        
     guess=[]
     turns=0
     num=0
-    
+        
     while num<1:
         for x in range(0,l):
             if letter1==word[x]:
                 guess.append(letter1)
             else:
-                guess.append('_')
+               guess.append('_')
             if letter1 not in word:
                 turns=turns+1
         num=num+1
-
+    
     while turns<5 and num>0:
         
         while letter1 not in a:
@@ -49,7 +49,7 @@ if choose==1:
         
         for x in range(0,l):
             if letter1==word[x]:
-                guess[x]=letter1
+               guess[x]=letter1
             elif guess[x] not in a:
                 guess[x]='_'
         
@@ -63,7 +63,7 @@ if choose==1:
         if word==guess:
             print("The word is "+newword+". You won!")
             turns=5
-
+    
 
 
 
