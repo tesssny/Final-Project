@@ -8,7 +8,7 @@ a=string.ascii_lowercase
 choose=int(input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. "))
 
 if choose==2:
-    print(cool)
+    print("cool")
 
 if choose==1:
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
