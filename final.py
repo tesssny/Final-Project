@@ -28,7 +28,6 @@ if choose==1:
     guess=[]
     turns=0
     num=0
-
     while num<1:
         for x in range(0,l):
             if letter1==word[x]:
