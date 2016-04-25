@@ -64,7 +64,8 @@ if choose==1:
             print("The word is "+newword+". You won!")
             turns=5
     
-
+else:
+    print("Invalid input. Start over.")
 
 
     
