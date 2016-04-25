@@ -5,7 +5,10 @@ sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-i
 import random
 import string
 a=string.ascii_lowercase
-choose=int(input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word"))
+choose=int(input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. "))
+
+if choose==2:
+    print(cool)
 
 if choose==1:
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
@@ -61,8 +64,6 @@ if choose==1:
             print("The word is "+newword+". You won!")
             turns=5
 
-if choose==2:
-    print(cool)
 
 
 
