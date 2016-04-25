@@ -28,7 +28,7 @@ if choose==1:
     guess=[]
     turns=0
     num=0
-    
+
     while num<1:
         for x in range(0,l):
             if letter1==word[x]:
@@ -38,7 +38,7 @@ if choose==1:
             if letter1 not in word:
                 turns=turns+1
         num=num+1
-    
+
     while turns<5 and num>0:
         
         while letter1 not in a:
