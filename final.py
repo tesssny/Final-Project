@@ -32,13 +32,9 @@ if choose==2:
         if letter1 not in word:
             turns=turns+1
         num=num+2
-
+        print("Computer's guess = "+letter1+"   "+' '.join(guess) )
     while turns<5 and num>0:
-        
-        while letter1 not in a:
-            letter1=input("Invalid input. Please guess a lowercase letter.") 
-        
-        letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+        letter1=random.choice(a)
         
         for x in range(0,l):
             if letter1==word[x]:
@@ -48,13 +44,13 @@ if choose==2:
         
         if letter1 not in word:
             turns=turns+1
-        
+        print("Computer's guess = "+letter1+"   "+' '.join(guess) )
         
         if turns==5:
-            print("Game Over")
+            print("You stumped the computer!")
         
         if word==guess:
-            print("The word is "+newword+". You won!")
+            print("The computer guessed your word.")
             turns=5
 
 elif choose==1:
