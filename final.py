@@ -1,7 +1,7 @@
 """
 sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester)
 """
-
+import time
 import random
 import string
 a=string.ascii_lowercase
@@ -51,7 +51,7 @@ if choose==2:
         
         time.sleep(1)
         
-        if turns==5:
+        if turns==7:
             print("You stumped the computer!")
         
         if word==guess:
@@ -104,7 +104,7 @@ elif choose==1:
             turns=turns+1
         
         
-        if turns==5:
+        if turns==7:
             print("The word was "+newword+". Game over.")
         
         if word==guess:
