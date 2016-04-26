@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester)
 """
 
 import random
@@ -64,7 +64,7 @@ elif choose==1:
         abc=newword[x]
         word.append(abc)
         
-    letter1=input("number of spaces = "+str(l)+". After five wrong guesses, you lose. First guess? ") #first letter guess
+    letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
         
@@ -82,7 +82,7 @@ elif choose==1:
             turns=turns+1
         num=num+2
 
-    while turns<5 and num>0:
+    while turns<7 and num>0:
         
         while letter1 not in a:
             letter1=input("Invalid input. Please guess a lowercase letter.") 
@@ -100,11 +100,11 @@ elif choose==1:
         
         
         if turns==5:
-            print("Game Over")
+            print("The word was "+newword+". Game over.")
         
         if word==guess:
             print("The word is "+newword+". You won!")
-            turns=5
+            turns=100
     
 else:
     print("Invalid input. Start over.")
