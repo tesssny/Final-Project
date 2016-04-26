@@ -33,7 +33,7 @@ if choose==2:
             turns=turns+1
         num=num+2
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-    while turns<5 and num>0:
+    while turns<7 and num>0:
         letter1=random.choice(a)
         
         for x in range(0,l):
@@ -51,7 +51,7 @@ if choose==2:
         
         if word==guess:
             print("The computer guessed your word.")
-            turns=5
+            turns=100
 
 elif choose==1:
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
