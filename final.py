@@ -33,6 +33,9 @@ if choose==2:
             turns=turns+1
         num=num+2
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
+        
+    time.sleep(1)
+
     while turns<7 and num>0:
         letter1=random.choice(a)
         
@@ -45,6 +48,8 @@ if choose==2:
         if letter1 not in word:
             turns=turns+1
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
+        
+        time.sleep(1)
         
         if turns==5:
             print("You stumped the computer!")
