@@ -35,17 +35,16 @@ elif choose==1:
                 guess.append(letter1)
             else:
                guess.append('_')
-            if letter1 not in word:
-                turns=turns+1
-        num=num+1
-    
+        if letter1 not in word:
+            turns=turns+1
+        num=num+2
+
     while turns<5 and num>0:
         
         while letter1 not in a:
             letter1=input("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
-        
         
         for x in range(0,l):
             if letter1==word[x]:
