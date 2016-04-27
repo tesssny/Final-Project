@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester)
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm
 """
 import time
 import random
@@ -97,7 +97,7 @@ elif choose==1:
     while turns<7 and num>0:
         
         while letter1 not in a:
-            letter1=input("Invalid input. Please guess a lowercase letter.") 
+            print("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
         
