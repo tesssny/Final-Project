@@ -5,9 +5,9 @@ import time
 import random
 import string
 a=string.ascii_lowercase
-choose=int(input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. "))
+choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
 
-if choose==2:
+if choose=='2':
     newword=input("What is your word? ")
     newword=newword.lower()
     l=len(newword) #count the number of letters
@@ -65,7 +65,7 @@ if choose==2:
             print("The computer guessed your word.")
             turns=100
 
-elif choose==1:
+elif choose=='1':
     words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
         
     newword=random.choice(words) #randomly select word
