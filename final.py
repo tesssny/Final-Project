@@ -12,7 +12,7 @@ if choose==2:
     newword=newword.lower()
     l=len(newword) #count the number of letters
     
-    a=list(a)
+    a2=list(a)
     letter=[]
     word=[] #creating a list of letters in newword
     for x in range(0,l):
@@ -36,15 +36,15 @@ if choose==2:
             turns=turns+1
         num=num+2
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-        
+       
     
 
     while turns<7 and num>0:
-        for x in a:
+        for x in a2:
             if x in letter:
-                a.remove(x)
+                a2.remove(x)
         
-        letter1=random.choice(a)
+        letter1=random.choice(a2)
         
         for x in range(0,l):
             if letter1==word[x]:
