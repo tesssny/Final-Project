@@ -3,7 +3,6 @@ sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-i
 """
 import random
 import string
-
 a=string.ascii_lowercase
 choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
 
@@ -84,11 +83,11 @@ if choose=='2':
             turns=100
 
 elif choose=='1':
-    words =[]
-    w= open("google-10000-english-usa.txt")
+    words=[]
+    w=open("google-10000-english-usa.txt")
     for x in w:
         words.append(x)
-    print(words)
+   
  
     newword=random.choice(words) #randomly select word
     l=len(newword) #count the number of letters
