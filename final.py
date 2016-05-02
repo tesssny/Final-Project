@@ -4,8 +4,9 @@ sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-i
 import random
 import string
 a=string.ascii_lowercase
-choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
 
+#choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
+choose = '1'
 if choose=='2':
     newword=input("What is your word? ")
     newword=newword.lower()
@@ -73,8 +74,6 @@ if choose=='2':
             turns=turns+1
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
         
-        #time.sleep(1)
-        
         if turns==7:
             print("You stumped the computer!")
         
@@ -93,14 +92,17 @@ elif choose=='1':
     newword=random.choice(words) #randomly select word
     l=len(newword) #count the number of letters
     
+
     word=[] #creating a list of letters in newword
     for x in range(0,l):
         abc=newword[x]
         word.append(abc)
-        
+    
     letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
+
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
+    
         
     guess=[]
     turns=0
