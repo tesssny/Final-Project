@@ -5,8 +5,8 @@ import random
 import string
 a=string.ascii_lowercase
 
-#choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
-choose = '1'
+choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
+
 if choose=='2':
     newword=input("What is your word? ")
     newword=newword.lower()
