@@ -87,6 +87,7 @@ elif choose=='1':
     w=open("google-10000-english-usa.txt")
     for x in w:
         words.append(x)
+
    
  
     newword=random.choice(words) #randomly select word
