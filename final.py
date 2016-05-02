@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck, http://www.katrinerk.com/courses/python-worksheets/worksheet-reading-and-writing-files
 """
 import random
 import string
