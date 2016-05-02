@@ -84,8 +84,12 @@ if choose=='2':
             turns=100
 
 elif choose=='1':
-    words = ['giraffe', 'hangman', 'tulip', 'purple', 'petunia', 'delivery', 'extraneous', 'plywood', 'highway', 'pullover']
-        
+    words =[]
+    w= open("google-10000-english-usa.txt")
+    for x in w:
+        words.append(x)
+    print(words)
+ 
     newword=random.choice(words) #randomly select word
     l=len(newword) #count the number of letters
     
