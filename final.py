@@ -88,7 +88,6 @@ elif choose=='1':
         words.append(x)
 
     newword=random.choice(words) #randomly select word
-    print(newword)
     l=len(newword) #count the number of letters
     
 
@@ -135,10 +134,10 @@ elif choose=='1':
         
         
         if turns==7:
-            print("The word was "+newword+". Game over.")
+            print("The word was "+''.join(word)+". Game over.")
         
         if word==guess:
-            print("The word is "+newword+". You won!")
+            print("The word is "+''.join(word)+". You won!")
             turns=100
     
 else:
