@@ -42,7 +42,7 @@ if choose=='2':
             print("Computer's guess = "+letter1+"   "+' '.join(guess) )
             print("The computer guessed your word.")
             num=2
-            turns=8
+            turns=100
         
 
     while num<1:
@@ -62,7 +62,7 @@ if choose=='2':
 
     while turns<7 and num>0:
         for x in a2:
-            if x in letter:
+            if x==letter1:
                 a2.remove(x)
         
         letter1=random.choice(a2)
