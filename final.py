@@ -87,18 +87,17 @@ elif choose=='1':
     for x in w:
         words.append(x)
 
-   
- 
     newword=random.choice(words) #randomly select word
+    print(newword)
     l=len(newword) #count the number of letters
     
 
     word=[] #creating a list of letters in newword
-    for x in range(0,l):
+    for x in range(0,l-1):
         abc=newword[x]
         word.append(abc)
     
-    letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
+    letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
 
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
@@ -109,7 +108,7 @@ elif choose=='1':
     num=0
         
     while num<1:
-        for x in range(0,l):
+        for x in range(0,l-1):
             if letter1==word[x]:
                 guess.append(letter1)
             else:
@@ -125,7 +124,7 @@ elif choose=='1':
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
         
-        for x in range(0,l):
+        for x in range(0,l-1):
             if letter1==word[x]:
                guess[x]=letter1
             elif guess[x] not in a:
