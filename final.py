@@ -27,6 +27,7 @@ if choose=='2':
     if l>1:
         letter1="e"
         letter.append(letter1)
+  
     if l==1:
         letter1="a"
         letter.append(letter1)
