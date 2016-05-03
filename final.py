@@ -100,15 +100,18 @@ elif choose=='1':
         word.append(abc)
     
     letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
+    
+    if letter1==word:
+        print("The word is "+''.join(word)+". You won!")
+        turns=100
 
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
     
-        
     guess=[]
     turns=0
     num=0
-        
+ 
     while num<1:
         for x in range(0,l-1):
             if letter1==word[x]:
@@ -120,11 +123,15 @@ elif choose=='1':
         num=num+2
 
     while turns<7 and num>0:
-        
         while letter1 not in a:
             print("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+        
+        if letter1==word:
+            print("The word is "+''.join(word)+". You won!")
+            turns=100
+            break
         
         for x in range(0,l-1):
             if letter1==word[x]:
