@@ -56,7 +56,9 @@ if choose=='2':
         num=num+2
         print("Computer's guess = "+letter1+"   "+' '.join(guess) )
        
-    
+        if word==guess:
+            print("The computer guessed your word.")
+            turns=100
 
     while turns<7 and num>0:
         for x in a2:
