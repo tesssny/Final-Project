@@ -167,11 +167,11 @@ elif choose=='3':
     
 
     word=[] #creating a list of letters in newword
-    for x in range(0,l-1):
+    for x in range(0,l):
         abc=newword[x]
         word.append(abc)
     
-    letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
+    letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
     
     if letter1==word:
         print("The word is "+''.join(word)+". You won!")
@@ -185,7 +185,7 @@ elif choose=='3':
     num=0
  
     while num<1:
-        for x in range(0,l-1):
+        for x in range(0,l):
             if letter1==word[x]:
                 guess.append(letter1)
             else:
@@ -205,7 +205,7 @@ elif choose=='3':
             turns=100
             break
         
-        for x in range(0,l-1):
+        for x in range(0,l):
             if letter1==word[x]:
                guess[x]=letter1
             elif guess[x] not in a:
