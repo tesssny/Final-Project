@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck, http://www.katrinerk.com/courses/python-worksheets/worksheet-reading-and-writing-files
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck, http://www.katrinerk.com/courses/python-worksheets/worksheet-reading-and-writing-files, http://www.datagenetics.com/blog/april12012/
 """
 import random
 import string
@@ -62,7 +62,7 @@ if choose=='2':
             print("The computer guessed your word.")
             turns=100
 
-    while turns<7 and num>0:
+    while turns<10 and num>0:
         #for x in a2:
             #if x==letter1:
                 #a2.remove(x)
@@ -80,7 +80,7 @@ if choose=='2':
                 turns=turns+1
             print("Computer's guess = "+letter1+"   "+' '.join(guess) )
             
-            if turns==7:
+            if turns==10:
                 print("You stumped the computer!")
                 break
             
