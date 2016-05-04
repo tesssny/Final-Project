@@ -160,6 +160,67 @@ elif choose=='1':
         if word==guess:
             print("The word is "+''.join(word)+". You won!")
             turns=100
+
+elif choose=='3':
+    newword=input("Player 1, input your word. ")
+    l=len(newword) #count the number of letters
+    
+
+    word=[] #creating a list of letters in newword
+    for x in range(0,l-1):
+        abc=newword[x]
+        word.append(abc)
+    
+    letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
+    
+    if letter1==word:
+        print("The word is "+''.join(word)+". You won!")
+        turns=100
+
+    while letter1 not in a:
+        letter1=input("Invalid input. Please guess a lowercase letter.") 
+    
+    guess=[]
+    turns=0
+    num=0
+ 
+    while num<1:
+        for x in range(0,l-1):
+            if letter1==word[x]:
+                guess.append(letter1)
+            else:
+               guess.append('_')
+        if letter1 not in word:
+            turns=turns+1
+        num=num+2
+
+    while turns<7 and num>0:
+        while letter1 not in a:
+            print("Invalid input. Please guess a lowercase letter.") 
+        
+        letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+        
+        if letter1==''.join(word):
+            print("The word is "+''.join(word)+". You won!")
+            turns=100
+            break
+        
+        for x in range(0,l-1):
+            if letter1==word[x]:
+               guess[x]=letter1
+            elif guess[x] not in a:
+                guess[x]='_'
+        
+        if letter1 not in word:
+            turns=turns+1
+        
+        
+        if turns==7:
+            print("The word was "+''.join(word)+". Game over.")
+        
+        if word==guess:
+            print("The word is "+''.join(word)+". You won!")
+            turns=100
     
 else:
     print("Invalid input. Start over.")
