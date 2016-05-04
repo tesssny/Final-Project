@@ -13,6 +13,8 @@ if choose=='2':
     l=len(newword) #count the number of letters
     
     a2=list(a)
+    common=('e','s','i','a','r','n','t','o','l','c','d','u','p','m','g','h','b','y','f','v','k','w','z','x','q','j')
+    clength=len(common)
     letter=[]
     word=[] #creating a list of letters in newword
     guess=[]
@@ -61,28 +63,31 @@ if choose=='2':
             turns=100
 
     while turns<7 and num>0:
-        for x in a2:
-            if x==letter1:
-                a2.remove(x)
+        #for x in a2:
+            #if x==letter1:
+                #a2.remove(x)
         
-        letter1=random.choice(a2)
+        for x in range(1,clength):
+            letter1=common[x]
         
-        for x in range(0,l):
-            if letter1==word[x]:
-               guess[x]=letter1
-            elif guess[x] not in a:
-                guess[x]='_'
-        
-        if letter1 not in word:
-            turns=turns+1
-        print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-        
-        if turns==7:
-            print("You stumped the computer!")
-        
-        if word==guess:
-            print("The computer guessed your word.")
-            turns=100
+            for x in range(0,l):
+                if letter1==word[x]:
+                   guess[x]=letter1
+                elif guess[x] not in a:
+                    guess[x]='_'
+            
+            if letter1 not in word:
+                turns=turns+1
+            print("Computer's guess = "+letter1+"   "+' '.join(guess) )
+            
+            if turns==7:
+                print("You stumped the computer!")
+                break
+            
+            if word==guess:
+                print("The computer guessed your word.")
+                turns=100
+                break
 
 elif choose=='1':
     words=[]
