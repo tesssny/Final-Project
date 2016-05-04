@@ -128,7 +128,7 @@ elif choose=='1':
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
         
-        if letter1==word:
+        if letter1==''.join(word):
             print("The word is "+''.join(word)+". You won!")
             turns=100
             break
