@@ -5,7 +5,7 @@ import random
 import string
 a=string.ascii_lowercase
 
-choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. ")
+choose=input("Type '1' if you want to guess the word. Type '2' if you want the computer to guess your word. Type '3' if you would like to play a two player game. ")
 
 if choose=='2':
     newword=input("What is your word? ")
@@ -24,6 +24,9 @@ if choose=='2':
     for x in range(0,l):
         abc=newword[x]
         word.append(abc)
+        if newword[x] not in a:
+            print("Invalid input. Start over. ")
+            break
         
     
     if l>1:
