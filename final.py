@@ -163,41 +163,43 @@ elif choose=='1':
 
 elif choose=='3':
     newword=input("Player 1, input your word. ")
-    print('\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n')
-    
-    
     l=len(newword) #count the number of letters
-    
+    guess=[]
+    turns=0
+    num=0
 
     word=[] #creating a list of letters in newword
     for x in range(0,l):
         abc=newword[x]
         word.append(abc)
-    
-    letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
-    
-    if letter1==word:
-        print("The word is "+''.join(word)+". You won!")
-        turns=100
+        if newword[x] not in a:
+            print("Invalid input. Start over. ")
+            turns=100
+            num=50
+            break
 
-    while letter1 not in a:
-        letter1=input("Invalid input. Please guess a lowercase letter.") 
-    
-    guess=[]
-    turns=0
-    num=0
  
     while num<1:
+        print('\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n')
+        letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
+    
+        if letter1==word:
+            print("The word is "+''.join(word)+". You won!")
+            turns=100
+    
+        while letter1 not in a:
+            letter1=input("Invalid input. Please guess a lowercase letter.") 
+        
         for x in range(0,l):
             if letter1==word[x]:
                 guess.append(letter1)
             else:
-               guess.append('_')
+                guess.append('_')
         if letter1 not in word:
             turns=turns+1
         num=num+2
 
-    while turns<7 and num>0:
+    while turns<7 and num>0 and num<40:
         while letter1 not in a:
             print("Invalid input. Please guess a lowercase letter.") 
         
