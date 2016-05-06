@@ -163,6 +163,9 @@ elif choose=='1':
 
 elif choose=='3':
     newword=input("Player 1, input your word. ")
+    print('\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n')
+    
+    
     l=len(newword) #count the number of letters
     
 
@@ -216,10 +219,10 @@ elif choose=='3':
         
         
         if turns==7:
-            print("The word was "+''.join(word)+". Game over.")
+            print("The word was "+''.join(word)+". Player 1 wins!")
         
         if word==guess:
-            print("The word is "+''.join(word)+". You won!")
+            print("The word is "+''.join(word)+". Player 2 wins!")
             turns=100
     
 else:
