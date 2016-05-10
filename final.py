@@ -120,7 +120,6 @@ elif choose=='1':
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
     
-    letterone=[]
     guess=[]
     turns=0
     num=0
