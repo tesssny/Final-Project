@@ -1,5 +1,5 @@
 """
-sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck, http://www.katrinerk.com/courses/python-worksheets/worksheet-reading-and-writing-files, http://www.datagenetics.com/blog/april12012/
+sources: http://stackoverflow.com/questions/306400/how-do-i-randomly-select-an-item-from-a-list-using-python, https://inventwithpython.com/chapter9.html, http://stackoverflow.com/questions/14667578/check-if-a-number-already-exist-in-a-list-in-python, mary feyrer, Glen Passow (game tester), http://stackoverflow.com/questions/7522533/how-can-i-turn-a-string-into-a-list-in-python, http://www.tutorialspoint.com/python/list_remove.htm, https://github.com/first20hours/google-10000-english, adam glueck, http://www.katrinerk.com/courses/python-worksheets/worksheet-reading-and-writing-files, http://www.datagenetics.com/blog/april12012/, http://stackoverflow.com/questions/7027355/return-to-the-top-of-a-loop
 """
 import random
 import string
@@ -104,13 +104,14 @@ elif choose=='1':
     newword=random.choice(words) #randomly select word
     l=len(newword) #count the number of letters
     
-
+    letterone=[]
     word=[] #creating a list of letters in newword
     for x in range(0,l-1):
         abc=newword[x]
         word.append(abc)
     
     letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
+    letterone.append(letter1)
     
     if letter1==word:
         print("The word is "+''.join(word)+". You won!")
@@ -119,6 +120,7 @@ elif choose=='1':
     while letter1 not in a:
         letter1=input("Invalid input. Please guess a lowercase letter.") 
     
+    letterone=[]
     guess=[]
     turns=0
     num=0
@@ -138,6 +140,11 @@ elif choose=='1':
             print("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+        if letter1 in letterone:
+            print("You already guessed this letter.")
+            continue
+        
+        letterone.append(letter1)
         
         if letter1==''.join(word):
             print("The word is "+''.join(word)+". You won!")
@@ -182,7 +189,9 @@ elif choose=='3':
     while num<1:
         print('\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n')
         letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
-    
+        
+        letterone.append(letter1)
+        
         if letter1==word:
             print("The word is "+''.join(word)+". You won!")
             turns=100
@@ -204,6 +213,12 @@ elif choose=='3':
             print("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
+        
+        if letter1 in letterone:
+            print("You already guessed this letter.")
+            continue
+        
+        letterone.append(letter1)
         
         if letter1==''.join(word):
             print("The word is "+''.join(word)+". You won!")
