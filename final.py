@@ -173,7 +173,7 @@ elif choose=='3':
     guess=[]
     turns=0
     num=0
-
+    letterone=[]
     word=[] #creating a list of letters in newword
     for x in range(0,l):
         abc=newword[x]
