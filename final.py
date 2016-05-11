@@ -117,7 +117,7 @@ elif choose=='1':
         print("The word is "+''.join(word)+". You won!")
         turns=100
 
-    while letter1 not in a:
+    while letter1 not in a and letter1!=''.join(word):
         letter1=input("Invalid input. Please guess a lowercase letter.") 
     
     guess=[]
@@ -143,7 +143,7 @@ elif choose=='1':
             print("You already guessed this letter.")
             continue
         
-        if letter1 not in a:
+        if letter1 not in a and letter1!=''.join(word):
             print("Invalid input. Please guess a lowercase letter.")
             continue
         
@@ -199,7 +199,7 @@ elif choose=='3':
             print("The word is "+''.join(word)+". You won!")
             turns=100
     
-        while letter1 not in a:
+        while letter1 not in a and letter1!=''.join(word):
             letter1=input("Invalid input. Please guess a lowercase letter.") 
         
         for x in range(0,l):
@@ -219,7 +219,7 @@ elif choose=='3':
             print("You already guessed this letter.")
             continue
         
-        if letter1 not in a:
+        if letter1 not in a and letter1!=''.join(word):
             print("Invalid input. Please guess a lowercase letter.")
             continue
         
