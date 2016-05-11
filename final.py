@@ -135,12 +135,16 @@ elif choose=='1':
         num=num+2
 
     while turns<7 and num>0:
-        while letter1 not in a:
-            print("Invalid input. Please guess a lowercase letter.") 
+        #while letter1 not in a:
+            #print("Invalid input. Please guess a lowercase letter.") 
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
-        if letter1 in letterone:
+        if letter1 in letterone and letter1 in a:
             print("You already guessed this letter.")
+            continue
+        
+        if letter1 not in a:
+            print("Invalid input. Please guess a lowercase letter.")
             continue
         
         letterone.append(letter1)
