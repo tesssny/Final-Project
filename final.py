@@ -14,6 +14,8 @@ if choose=='2':
     
     a2=list(a)
     common=('e','s','i','a','r','n','t','o','l','c','d','u','p','m','g','h','b','y','f','v','k','w','z','x','q','j')
+    consonants=('s','r','n','t','l','c','d','p','m','g','h','b','f','v','k','w','z','x','q','j','y')
+    vowels('e','i','a','o','u','y')
     clength=len(common)
     letter=[]
     word=[] #creating a list of letters in newword
@@ -110,7 +112,7 @@ elif choose=='1':
         abc=newword[x]
         word.append(abc)
     
-    letter1=input("number of spaces = "+str(l-1)+". After seven wrong guesses, you lose. First guess? ") #first letter guess
+    letter1=input("number of spaces = "+str(l-1)+". After eleven wrong guesses, you lose. First guess? ") #first letter guess
     letterone.append(letter1)
     
     if letter1==word:
@@ -134,7 +136,7 @@ elif choose=='1':
             turns=turns+1
         num=num+2
 
-    while turns<7 and num>0:
+    while turns<11 and num>0:
         #while letter1 not in a:
             #print("Invalid input. Please guess a lowercase letter.") 
         
@@ -164,7 +166,7 @@ elif choose=='1':
             turns=turns+1
         
         
-        if turns==7:
+        if turns==11:
             print("The word was "+''.join(word)+". Game over.")
         
         if word==guess:
@@ -191,7 +193,7 @@ elif choose=='3':
  
     while num<1:
         print('\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n'+'\n' +'\n'+'\n' +'\n' +'\n' +'\n')
-        letter1=input("number of spaces = "+str(l)+". After seven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
+        letter1=input("number of spaces = "+str(l)+". After eleven wrong guesses, you lose. Player 2, first guess? ") #first letter guess
         
         letterone.append(letter1)
         
@@ -211,7 +213,7 @@ elif choose=='3':
             turns=turns+1
         num=num+2
 
-    while turns<7 and num>0 and num<40:
+    while turns<11 and num>0 and num<40:
         
         letter1=input(' '.join(guess)+" Number of wrong guesses = "+str(turns)+". Next guess?")
         
@@ -240,7 +242,7 @@ elif choose=='3':
             turns=turns+1
         
         
-        if turns==7:
+        if turns==11:
             print("The word was "+''.join(word)+". Player 1 wins!")
         
         if word==guess:
@@ -249,6 +251,3 @@ elif choose=='3':
     
 else:
     print("Invalid input. Start over.")
-
-
-    
