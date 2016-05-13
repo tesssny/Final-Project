@@ -14,8 +14,7 @@ if choose=='2':
     
     a2=list(a)
     common=('e','s','i','a','r','n','t','o','l','c','d','u','p','m','g','h','b','y','f','v','k','w','z','x','q','j')
-    consonants=('s','r','n','t','l','c','d','p','m','g','h','b','f','v','k','w','z','x','q','j','y')
-    vowels('e','i','a','o','u','y')
+    
     clength=len(common)
     letter=[]
     word=[] #creating a list of letters in newword
@@ -32,10 +31,10 @@ if choose=='2':
             num=0
             break
         else:
-            if l>1:
-                letter1="e"
-                letter.append(letter1)
-                num=1
+            #if l>1:
+                #letter1="e"
+                #letter.append(letter1)
+                #num=1
           
             if l==1:
                 letter1="a"
@@ -54,6 +53,21 @@ if choose=='2':
                     num=2
                     turns=100
                 
+            if l==2:
+                common2=['a','o','e','i','u','m','b','h']
+                for m in common2:
+                    letter1=m
+                    letter.append(letter1)
+                    if letter1==word[x]:
+                        guess.append(letter1)
+                    if letter1 not in word:
+                        turns=turns+1
+                    print("Computer's guess = "+letter1+"   "+' '.join(guess) )
+                    if word==guess:
+                        print("The computer guessed your word.")
+                        turns=100
+                        break    
+                    
 
     while num==1:
         for x in range(0,l):
