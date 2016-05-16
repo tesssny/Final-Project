@@ -32,20 +32,20 @@ if choose=='2':
             break
         else:
             if l>1:
-                #letter1="e"
-                #letter.append(letter1)
+                letter1="e"
+                letter.append(letter1)
                 num=1
           
             if l==1:
                 letter1="a"
                 letter.append(letter1)
-                if letter1==word[x]:
-                        guess.append(letter1)
+                if a==word[x]:
+                    guess.append(letter1)
                 if letter1 not in word:
                     turns=turns+1
-                    nextguess="i"
-                    print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-                    letter1=nextguess
+                    #nextguess="i"
+                    print("Computer's guess = "+letter1+"   "+'_' )
+                    letter1='i'
                     num=1
                 if letter1 in word:
                     print("Computer's guess = "+letter1+"   "+' '.join(guess) )
@@ -74,7 +74,6 @@ if choose=='2':
                     
     """
     while num==1:
-        letter1='e'
         for x in range(0,l):
             if letter1==word[x]:
                 guess.append(letter1)
@@ -94,11 +93,11 @@ if choose=='2':
             #if x==letter1:
                 #a2.remove(x)
         
-        if l==2:
-            common2=['a','o','i','u','m','b','h']
-            c2length=len(common2)
-            for x in range(0,c2length):
-                letter1=common2[x]
+        if l==1:
+            common1=['e','s','r','n','t','o','l','c','d','u','p','m','g','h','b','y','f','v','k','w','z','x','q','j']
+            c1length=len(common1)
+            for x in range(0,c1length):
+                letter1=common1[x]
         
                 for x in range(0,l):
                     if letter1==word[x]:
@@ -119,28 +118,28 @@ if choose=='2':
                     turns=100
                     break
 
-
-        for x in range(1,clength):
-            letter1=common[x]
-        
-            for x in range(0,l):
-                if letter1==word[x]:
-                   guess[x]=letter1
-                elif guess[x] not in a:
-                    guess[x]='_'
+        else:
+            for x in range(1,clength):
+                letter1=common[x]
             
-            if letter1 not in word:
-                turns=turns+1
-            print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-            
-            if turns==10:
-                print("You stumped the computer!")
-                break
-            
-            if word==guess:
-                print("The computer guessed your word.")
-                turns=100
-                break
+                for x in range(0,l):
+                    if letter1==word[x]:
+                       guess[x]=letter1
+                    elif guess[x] not in a:
+                        guess[x]='_'
+                
+                if letter1 not in word:
+                    turns=turns+1
+                print("Computer's guess = "+letter1+"   "+' '.join(guess) )
+                
+                if turns==10:
+                    print("You stumped the computer!")
+                    break
+                
+                if word==guess:
+                    print("The computer guessed your word.")
+                    turns=100
+                    break
 
 elif choose=='1':
     words=[]
