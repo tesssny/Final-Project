@@ -55,7 +55,8 @@ if choose=='2':
                     
 
             if l==2:
-                letter1="a"
+                common2=['a','o','e','i','u','m','b','h','s']
+                letter1=common2[x]
                 letter.append(letter1)
                 if letter1==word[x]:
                     guess.append(letter1)
@@ -63,37 +64,12 @@ if choose=='2':
                     guess.append('_')
                 if letter1 in word:
                     print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-                    print("hi")
                     num=2
-                    break
                 if letter1 not in word:
                     turns=turns+1
-                    print("Computer's guess = "+letter1+"   "+'_ _' )
-                    num=2
-                    break
-                
-                letter1='o'
-    """
-            if l==2:
-                common2=['a','o','e','i','u','m','b','h','s']
-                for m in common2:
-                    letter1=m
-                    letter.append(letter1)
-                    for x in range(0,1):
-                        if letter1==word[x]:
-                            guess.append(letter1)
-                        else:
-                           guess.append('_')
-                    if letter1 not in word:
-                        turns=turns+1
                     print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-                    if word==guess:
-                        print("The computer guessed your word.")
-                        turns=100
-                        num=50
-                        break    
-                    
-    """
+                    num=2
+   
     while num==1:
         for x in range(0,l):
             if letter1==word[x]:
@@ -145,11 +121,11 @@ if choose=='2':
             for x in range(0,c2length):
                 letter1=common2[x]
         
-                for x in range(0,l):
-                    if letter1==word[x]:
-                       guess[x]=letter1
-                    elif guess[x] not in a:
-                        guess[x]='_'
+                for z in range(0,l):
+                    if letter1==word[z]:
+                       guess[z]=letter1
+                    elif guess[z] not in a:
+                        guess[z]='_'
                 
                 if letter1 not in word:
                     turns=turns+1
