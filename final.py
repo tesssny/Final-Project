@@ -137,9 +137,9 @@ if choose=='2':
 
         if l==2:
             common2=['a','o','e','i','u','m','b','h','s','r','n','t','l','c','d','p','g','y','f','v','k','w','z','x','q','j']
-            c1length=len(common1)
-            for x in range(0,c1length):
-                letter1=common1[x]
+            c2length=len(common1)
+            for x in range(0,c2length):
+                letter1=common2[x]
         
                 for x in range(0,l):
                     if letter1==word[x]:
