@@ -35,7 +35,12 @@ if choose=='2':
                 letter1="e"
                 letter.append(letter1)
                 num=1
-          
+            
+            if l==2:
+                letter1='a'
+                letter.append(letter1)
+                num=1
+
             if l==1:
                 letter1="a"
                 letter.append(letter1)
@@ -54,22 +59,6 @@ if choose=='2':
                     turns=100
                     
 
-            if l==2:
-                common2=['a','o','e','i','u','m','b','h','s']
-                letter1=common2[x]
-                letter.append(letter1)
-                if letter1==word[x]:
-                    guess.append(letter1)
-                else:
-                    guess.append('_')
-                if letter1 in word:
-                    print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-                    num=2
-                if letter1 not in word:
-                    turns=turns+1
-                    print("Computer's guess = "+letter1+"   "+' '.join(guess) )
-                    num=2
-   
     while num==1:
         for x in range(0,l):
             if letter1==word[x]:
@@ -116,7 +105,7 @@ if choose=='2':
                     break
 
         if l==2:
-            common2=['e','i','u','m','b','h','s','r','n','t','l','c','d','p','g','y','f','v','k','w','z','x','q','j']
+            common2=['o','e','i','u','m','b','h','s','r','n','t','l','c','d','p','g','y','f','v','k','w','z','x','q','j']
             c2length=len(common2)
             for x in range(0,c2length):
                 letter1=common2[x]
