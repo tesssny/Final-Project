@@ -230,13 +230,30 @@ elif choose=='1':
             turns=100
 
 elif choose=='3':
-    newword=input("Player 1, input your word. ")
-    l=len(newword) #count the number of letters
     guess=[]
     turns=0
     num=0
     letterone=[]
     word=[] #creating a list of letters in newword
+    
+    newword=input("Player 1, input your word. ")
+"""
+    words=[]
+    w=open("google-10000-english-usa.txt")
+    for x in w:
+        words.append(x)
+        
+    if newword not in words:
+        print("Is this really a word...?")
+        print("Please start over.")
+        num=30
+        turns=100
+"""
+    
+    
+    
+    l=len(newword) #count the number of letters
+   
     for x in range(0,l):
         abc=newword[x]
         word.append(abc)
