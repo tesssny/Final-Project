@@ -12,6 +12,17 @@ if choose=='2':
     newword=newword.lower()
     l=len(newword) #count the number of letters
     
+    words=[]
+    w=open("words.txt")
+    for x in w:
+        words.append(x)
+        
+    if newword not in words:
+        print("Is this really a word...?")
+        print("Please start over.")
+        num=30
+        turns=100
+    
     a2=list(a)
     common=('e','s','i','a','r','n','t','o','l','c','d','u','p','m','g','h','b','y','f','v','k','w','z','x','q','j')
     
@@ -155,7 +166,7 @@ if choose=='2':
 
 elif choose=='1':
     words=[]
-    w=open("google-10000-english-usa.txt")
+    w=open("words.txt")
     for x in w:
         words.append(x)
 
@@ -237,9 +248,8 @@ elif choose=='3':
     word=[] #creating a list of letters in newword
     
     newword=input("Player 1, input your word. ")
-"""
     words=[]
-    w=open("google-10000-english-usa.txt")
+    w=open("words.txt")
     for x in w:
         words.append(x)
         
@@ -248,7 +258,6 @@ elif choose=='3':
         print("Please start over.")
         num=30
         turns=100
-"""
     
     
     
