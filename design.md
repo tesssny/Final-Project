@@ -1,15 +1,4 @@
-# Name of Your Project Here
+Hangman
 
-## Design Specification
 
-The design specificaiton is a counterpart to the Functional Speciffication. Where a functional specification concerns itself
-with inputs and outputs from the program, or the *experience* of a user running the program, the design specification is concerned with decisions that the engineer and programmer must make during its creation.
-
-The design specification should include information like:
-
-* What tools or frameworks will you use to build the project (e.g. http://runpython.com or ggame)?
-* What language will you use for coding (usually Python 3)?
-* For every element of the Functional Specification, what code will need to be written to support it?
-* What data will be stored or manipulated by the program? How will it be encoded and organized?
-* Describe the logic and/or code behind every interaction with the user, and behind everything displayed.
-* If your program uses an unusual or notable *algorithm*, what is the algorithm and how does it work?
+I used runpython.com and imported random and string. I used Python 3. It has three main if statements that run the three options for the game. The data stored by the computer is the input of the word to be guessed or the letter guesses of the word. The letter guesses are stored in lists and the words are stored as variables. The guesses and number of turns left are displayed to the user.
